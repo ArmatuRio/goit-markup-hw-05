@@ -122,34 +122,33 @@ ul {
   position: relative;
 }
 
-.site-nav .item::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: #2196f3;
-  border-radius: 2px;
-  position: relative;
-  opacity: 0;
-}
-
-.site-nav .item:hover:after {
-  opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .site-nav-contacts .link:hover,
 .site-nav-contacts .link:focus {
   color: #2196f3;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: #2196f3;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-nav .link.current::after {
+  position: absolute;
+  bottom: 0;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin-top: 28px;
+  background-color: #2196f3;
+  border-radius: 2px;
 }
 
 .site-nav .link.current {
   color: #2196f3;
+  position: relative;
 }
 
 .item .link {
@@ -427,6 +426,8 @@ ul {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-work {
@@ -447,6 +448,7 @@ ul {
 .card-work .item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ===Overlay=== */
@@ -558,6 +560,9 @@ ul {
   border: 1px solid #2196f3;
   border-radius: 4px;
   fill: #2196f3;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ====Footer=== */
@@ -647,6 +652,7 @@ ul {
 .footer-contacts .link:hover,
 .footer-contacts .link:focus {
   color: #2196f3;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop {
@@ -700,8 +706,8 @@ ul {
   cursor: pointer;
 }
 
-.modal-colse:hover,
-.modal-colse:focus {
+.modal-close:hover,
+.modal-close:focus {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
