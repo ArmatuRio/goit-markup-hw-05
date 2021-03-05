@@ -466,6 +466,7 @@ ul {
 }
 
 .work-thumb-card {
+  overflow: hidden;
   position: relative;
 }
 
